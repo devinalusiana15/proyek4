@@ -1,50 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Absensi" >
+    tools:context=".AbsensiActivity">
 
-    <LinearLayout
+    <GridLayout
+        android:id="@+id/grid_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="20dp"
+        android:columnCount="1"
+        android:rowCount="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_vertical|center|center_horizontal"
-        android:orientation="vertical"
-        android:padding="16dp" >
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Absensi"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/ungu_tua"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:layout_margin="16dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Lengkap"
+            android:textSize="18sp"
+            android:textColor="@color/ungu_tua"
+            android:layout_marginLeft="16dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="#F2F4FB"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="McPerfect"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nomor Induk Mahasiswa"
+            android:textSize="18sp"
+            android:textColor="@color/ungu_tua"
+            android:layout_marginLeft="16dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="#F2F4FB"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="211511090"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QR Code"
+            android:textSize="18sp"
+            android:textColor="@color/ungu_tua"
+            android:layout_marginLeft="16dp"
+            />
 
         <ImageView
-            android:id="@+id/i1"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginBottom="16dp"
-            android:scaleType="fitXY" />
+            android:id="@+id/qr_code_image_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="center_horizontal"
+            />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textinput1"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/generate_qr_code_button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:hint="Enter the text" >
+            android:text="Generate QR Code"
+            android:backgroundTint="@color/kuning"
+            android:layout_gravity="center_horizontal"
+            />
+    </GridLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/e1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/b1"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="GENERATE A CODE"
-            app:cornerRadius="10dp" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
