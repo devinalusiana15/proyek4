@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ic_backDaftar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/ic_arrow_back"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            tools:ignore="MissingConstraints">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txt_tit_daftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Selamat Datang!"
+            android:textColor="@color/purple_01"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="25sp"
+            android:layout_marginTop="50dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_subtit_daftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="100dp"
+            android:text="Buat Akun Baru"
+            android:textColor="@color/purple_01"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="18sp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/titleNamaLengkap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="5dp"
+                android:text="Nama Lengkap"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/purple_02"
+                android:textSize="15sp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputNamaLengkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <AutoCompleteTextView
+                    android:id="@+id/viewInputNamaLengkap"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:hint="Masukkan Nama Lengkap"
+                    android:inputType="text"
+                    android:background="@drawable/stroke_line"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_semibold">
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txt_nim_daftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="5dp"
+                android:text="Nomor Induk Mahasiswa"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/purple_02"
+                android:textSize="15sp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <AutoCompleteTextView
+                    android:id="@+id/inputNIM"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:hint="Masukkan NIM"
+                    android:inputType="number"
+                    android:background="@drawable/stroke_line"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_semibold">
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/titleJurusan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="5dp"
+                android:text="Jurusan"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/purple_02"
+                android:textSize="15sp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropdownJurusan"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:hint="Pilih Jurusan"
+                    android:background="@drawable/stroke_line"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:inputType="none">
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/titleProdi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="5dp"
+                android:text="Prodi"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/purple_02"
+                android:textSize="15sp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropdownProdi"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:hint="Pilih Prodi"
+                    android:background="@drawable/stroke_line"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:inputType="none">
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/titleEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="5dp"
+                android:text="Email"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/purple_02"
+                android:textSize="15sp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <AutoCompleteTextView
+                    android:id="@+id/viewInputEmail"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:hint="Masukkan Email"
+                    android:inputType="text"
+                    android:background="@drawable/stroke_line"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_semibold">
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/titleKataSandi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="5dp"
+                android:text="Kata Sandi"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/purple_02"
+                android:textSize="15sp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <AutoCompleteTextView
+                    android:id="@+id/viewInputPassword"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:hint="Masukkan Kata Sandi"
+                    android:inputType="text"
+                    android:background="@drawable/stroke_line"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_semibold">
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/titleKonfirmasiKataSandi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="5dp"
+                android:text="Konfimasi Kata Sandi"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/purple_02"
+                android:textSize="15sp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputKonfirmasiKataSandi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <AutoCompleteTextView
+                    android:id="@+id/viewInputKonfirmasiKataSandi"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:hint="Konfimasi Kata Sandi"
+                    android:inputType="text"
+                    android:background="@drawable/stroke_line"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_semibold">
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonFormDaftar"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_height="60dp"
+                android:layout_width="300dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="DAFTAR"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="15sp"
+                app:cornerRadius="25dp">
+            </Button>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

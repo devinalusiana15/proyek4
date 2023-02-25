@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Metagama-Apps</string>
+
+    <string-array name="jurusan">
+        <item>Jurusan Teknik Informatika</item>
+        <item>Jurusan Teknik Elektro</item>
+        <item>Jurusan Bahasa Inggris</item>
+    </string-array>
+</resources>
