@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MasukActivity">
+    tools:context=".activities.MasukActivity">
 
     <ImageView
         android:id="@+id/ic_backMasuk_btn"
@@ -49,101 +49,127 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:padding="10dp">
-
-        <TextView
-            android:id="@+id/titleUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_margin="5dp"
-            android:text="Username"
-            android:fontFamily="@font/poppins_semibold"
-            android:textColor="@color/purple_02"
-            android:textSize="15sp">
-        </TextView>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputUser"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center">
+        
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-            <AutoCompleteTextView
-                android:id="@+id/viewInputUser"
-                android:layout_width="300dp"
-                android:layout_height="48dp"
-                android:paddingLeft="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="5dp"
+                android:text="Username"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/purple_02"
+                android:textSize="15sp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/inputUsername"
                 android:hint="Masukkan Username"
+                android:paddingLeft="10dp"
                 android:inputType="number"
+                android:maxLength="9"
                 android:background="@drawable/stroke_line"
                 android:textSize="15sp"
                 android:fontFamily="@font/poppins_semibold">
-            </AutoCompleteTextView>
-        </com.google.android.material.textfield.TextInputLayout>
+            </EditText>
 
-        <TextView
-            android:id="@+id/titlePassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_margin="5dp"
-            android:text="Password"
-            android:fontFamily="@font/poppins_semibold"
-            android:textColor="@color/purple_02"
-            android:textSize="15sp">
-        </TextView>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputPass"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DC2626"
+                android:id="@+id/textViewNimHandle"
+                android:layout_marginTop="3dp"
+                android:paddingLeft="5dp"
+                android:fontFamily="@font/poppins_semibold">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-            <AutoCompleteTextView
-                android:id="@+id/viewInputPass"
-                android:layout_width="300dp"
-                android:layout_height="48dp"
-                android:paddingLeft="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titlePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="5dp"
+                android:text="Password"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/purple_02"
+                android:textSize="15sp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/inputPassword"
                 android:hint="Masukkan Password"
+                android:paddingLeft="10dp"
                 android:inputType="textPassword"
                 android:background="@drawable/stroke_line"
                 android:textSize="15sp"
                 android:fontFamily="@font/poppins_semibold">
-            </AutoCompleteTextView>
-        </com.google.android.material.textfield.TextInputLayout>
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DC2626"
+                android:id="@+id/textViewPassHandle"
+                android:layout_marginTop="3dp"
+                android:paddingLeft="5dp"
+                android:fontFamily="@font/poppins_semibold">
+            </TextView>
+        </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonForgotPass"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        app:layout_constraintRight_toRightOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintHeight_percent="0.60"
+        app:layout_constraintWidth_percent="0.85"
+        android:layout_marginTop="50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="365dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginEnd="10dp"
-        android:text="Lupa Kata Sandi"
-        android:fontFamily="@font/poppins_bold"
-        android:textSize="13sp">
-    </Button>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:id="@+id/textViewLupaPassword"
+            android:text="Lupa kata sandi"
+            android:clickable="true"
+            android:textColor="@color/purple_02"
+            android:fontFamily="@font/poppins_semibold"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonFormMasuk"
@@ -154,7 +180,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="180dp"
         android:text="MASUK"
         android:textColor="@color/white"
         android:fontFamily="@font/poppins_semibold"
