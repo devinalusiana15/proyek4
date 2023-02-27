@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        fab = findViewById(R.id.fab_btn)
+        fab = findViewById(R.id.fab)
 
         fab.setOnClickListener {
             val intent = Intent(this, AbsensiActivity::class.java)

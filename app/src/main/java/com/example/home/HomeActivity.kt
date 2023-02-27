@@ -13,6 +13,13 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        val btnIslam: CardView = findViewById(R.id.islam)
+        btnIslam.setOnClickListener{
+            val intent = Intent(this, ModulIslam::class.java)
+            startActivity(intent)
+        }
+
+
         //moving page buddha
         val btnBuddha: CardView = findViewById(R.id.buddha)
         btnBuddha.setOnClickListener{
